@@ -7,24 +7,27 @@
     <link rel="stylesheet" href="b.css"> <!-- Link to CSS -->
 </head>
 <body>
-    <div class="top" id="top-103"></div>
-    <div class="bottom" id="bottom-104">
-        <div class="left" id="left-1002"></div>
-        <div class="middle" id="middle-1003">
+    <div class="left" id="top-103"></div>
+    <div class="middle" id="middle-104">
+        <div class="top" id="top-1002"></div>
+        <div class="mainFromBody" id="mainFromBody-1003">
             <form action="/submit-form" method="POST">
-                <h2>User Information</h2>
+
+                <h4>User Information</h4>
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="Enter your username" required>
                 
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                <label for="phone">Password:</label>
+                <input type="text" id="password" name="password" placeholder="Enter your password" required>
                 
                 <button type="submit">Submit</button>
             </form>
         </div>
-        <div class="right" id="right-1003"></div>
-        
+        <div class="bottom" id="bottom-1004"></div>
     </div>
+    <div class="right" id="bottom-105"></div>
     
 </body>
 <script src="b.js"></script> <!-- Link to JavaScript -->
