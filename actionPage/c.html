@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIGIL</title>
+    <link rel="stylesheet" href="c.css"> <!-- Link to CSS -->
+</head>
+<body>
+   <div class="nav" id="nav-107">
+
+    <div class="logo" id="logo-1007"></div>
+     <div class="button" id="button-1008">
+        <button class="dashboard" onclick="showContent('dashboardPage-1011')">Dashboard</button>
+        <button class="profile" onclick="showContent('profilePage-1012')">My Profile</button>
+
+     </div>
+   </div>
+   <div class="view" id="view-108">
+
+    <div class="top" id="top-1009">
+        <div class="top1" id="top1-1009"> Welcome to Your Unified Journey!</div>
+        <div class="top2" id="top2-1009">
+            <button class="logout-btn" onclick="showModal()">Logout</button>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="logoutModal">
+        <p>You have been logged out!</p>
+        <button class="yes-btn" onclick="confirmLogout()">Yes</button>
+        <button class="no-btn" onclick="closeModal()">No</button>
+    </div>
+
+        </div>
+       </div> 
+    <div class="middle" id="middle-1010">
+    <div class="middle1">
+     <div class="dashboardPage" id="dashboardPage-1011">Dashboard
+     </div>
+     <div class="profilePage" id="profilePage-1012">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>28</td>
+                    <td>USA</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>34</td>
+                    <td>Canada</td>
+                </tr>
+                <tr>
+                    <td>Samuel Lee</td>
+                    <td>25</td>
+                    <td>South Korea</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+    </div> 
+    <div class="bottom" id="bottom-109">Stay Togeother / Innovating Together</div> 
+
+   </div>
+   
+   <script src="c.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>
