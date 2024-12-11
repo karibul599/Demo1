@@ -6,6 +6,7 @@ html,body {
     font-family: Arial, sans-serif;
     display: flex;
 }
+
 .nav{
     height: 100%;
     width: 20%;
@@ -59,13 +60,16 @@ html,body {
     
    
 }
+
+
+
 .view{
-    height: 100%;
     width: 80%;
     background-color: rgb(178, 240, 44);
 }
+
 .top{
-    height: 15%;
+    height: 35px;
     width: 100%;
     background-color: rgb(20, 19, 19);
     color: aliceblue;
@@ -169,16 +173,30 @@ html,body {
     width: 100%;
     background-color: rgb(245, 234, 241);
 }
- /* Content divs hidden by default */
-.middle .middle1 div {
+
+.middle1 div {
     display: none;
+    visibility: visible;
+
 }
-/* Show the active content */
-.middle .middle1 div.active {
-    display: block;
+
+
+.middle1 div.active {
+    display: block; 
 }
+
+.hidden {
+    display: none;
+  }
+
+  .month-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
 .bottom{
-    height: 5%;
+    height: 15px;
     width: 100%;
     background-color: rgb(209, 211, 192);
     display: flex; 
@@ -203,3 +221,4 @@ th {
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+

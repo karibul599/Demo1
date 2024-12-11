@@ -29,3 +29,19 @@ function closeModal() {
 function confirmLogout() {
     window.location.href ='../loginPage/b.html'// Redirect to login page
 }
+
+const totalAmountCard = document.getElementById('totalAmountCard');
+    const yearDetailsCard = document.getElementById('yearDetailsCard');
+    const monthCards = document.getElementById('monthCards');
+
+    // Show Year Wise Details Card on Total Amount Card click
+    totalAmountCard.addEventListener('click', () => {
+      yearDetailsCard.classList.remove('hidden');
+      monthCards.classList.add('hidden');
+    });
+
+    // Show Month Wise Cards on Year Wise Details Card click
+    yearDetailsCard.addEventListener('click', () => {
+      monthCards.classList.remove('hidden');
+      yearDetailsCard.classList.add('hidden');
+    });
