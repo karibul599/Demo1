@@ -69,7 +69,7 @@ html,body {
 }
 
 .top{
-    height: 35px;
+    height: 15%;
     width: 100%;
     background-color: rgb(20, 19, 19);
     color: aliceblue;
@@ -174,29 +174,17 @@ html,body {
     background-color: rgb(245, 234, 241);
 }
 
-.middle1 div {
-    display: none;
-    visibility: visible;
-
-}
-
-
-.middle1 div.active {
-    display: block; 
-}
-
-.hidden {
-    display: none;
-  }
-
-  .month-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.middle1 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    
+    height: 100%;
+    width: 100%;
   }
 
 .bottom{
-    height: 15px;
+    height: 5%;
     width: 100%;
     background-color: rgb(209, 211, 192);
     display: flex; 

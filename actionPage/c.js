@@ -1,20 +1,3 @@
-function showContent(contentId) {
-    // Get all content divs inside the viewport
-    const contents = document.querySelectorAll('.middle div');
-
-    // Hide all content divs
-    contents.forEach(content => {
-      content.classList.remove('active');
-    });
-
-    // Show the selected content
-    const selectedContent = document.getElementById(contentId);
-    if (selectedContent) {
-      selectedContent.classList.add('active');
-    }
-  }
-  // Show Dashboard by default on page load
-  document.getElementById('dashboardPage-1011').classList.add('active');
 
   function showModal() {
     document.getElementById('logoutModal').style.display = 'block';
@@ -29,19 +12,30 @@ function closeModal() {
 function confirmLogout() {
     window.location.href ='../loginPage/b.html'// Redirect to login page
 }
-
-const totalAmountCard = document.getElementById('totalAmountCard');
-    const yearDetailsCard = document.getElementById('yearDetailsCard');
-    const monthCards = document.getElementById('monthCards');
-
-    // Show Year Wise Details Card on Total Amount Card click
-    totalAmountCard.addEventListener('click', () => {
-      yearDetailsCard.classList.remove('hidden');
-      monthCards.classList.add('hidden');
-    });
-
-    // Show Month Wise Cards on Year Wise Details Card click
-    yearDetailsCard.addEventListener('click', () => {
-      monthCards.classList.remove('hidden');
-      yearDetailsCard.classList.add('hidden');
-    });
+    //button link
+    // function navigateToDashboard() {
+    //   window.location.href = "dashboard.html";
+    // }
+    // function navigateToProfile() {
+    //   window.location.href = "profile.html";
+    // }
+    function navigateToDashboard() {
+      fetch('dashboard.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('middle1').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading the dashboard:', error));
+  }
+  
+  function navigateToProfile() {
+      fetch('profile.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('middle1').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading the profile:', error));
+  } 
+  window.onload = function() {
+    navigateToDashboard(); // ডিফল্টভাবে Dashboard পেজ লোড হবে
+};

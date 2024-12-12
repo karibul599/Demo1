@@ -1,31 +1,74 @@
-html,body {
+html, body {
     height: 100vh;
     width: 100vw;
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-color: rgb(248, 244, 244);
     background-image: url('b.image/b.webp');
-    background-size: cover; /* Ensures the background image covers the full viewport */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents repeating the background */
-    /* border: 2px solid rgb(197, 51, 51); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    flex-direction: row; /* Flexbox ব্যবহার করছি এখানে */
+    justify-content: space-between; /* তিনটি অংশের মাঝে সঠিক জায়গা রাখবে */
 }
 
 .left {
     height: 100%;
     width: 35%;
     color: #0056b3;
-    display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    
-    
+    justify-content: space-between;
 }
+.left .left-1 {
+    height: 90%;
+    width: 100%;
+}
+.left .left-2 {
+    height: 10%;
+    width: 100%;
+    /* background-color: #b4d10f; */
+}
+.left .left-2 .back-button {
+    /* position: absolute;  */
+    /* পেজের যেকোনো জায়গায় রাখতে পারবেন */
+    top: 0px; /* উপরের দিক থেকে দূরত্ব */
+    left: 0px; /* বাম দিক থেকে দূরত্ব */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 80%;
+    width: 30%;
+    margin: 2px;
+    margin-left: 5px;
+
+}
+
+.back-button {
+    background: rgb(9, 208, 16);/* সুন্দর গ্র্যাডিয়েন্ট রং */
+    color: white;
+    border: none;
+    border-radius: 25px; /* বাটনকে গোলাকার দেখানোর জন্য */
+    padding: 5px 5px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow যোগ করে একটু উঁচু দেখানোর জন্য */
+    transition: all 0.3s ease; /* Hover ইফেক্টের জন্য মসৃণ ট্রানজিশন */
+    border:  2px solid rgb(255, 215, 0);
+}
+
+.back-button:hover {
+    transform: scale(1.1); /* বাটনে মাউস গেলে একটু বড় দেখাবে */
+    background: linear-gradient(45deg, #ee0979, #ff6a00); /* Hover করার সময় রং উল্টো হবে */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Shadow আরও গভীর হবে */
+    border:  2px solid rgb(246, 245, 240);
+    background: rgb(255, 215, 0);
+}
+
 
 .middle {
     position: absolute; /* Absolute পজিশন ব্যবহার করে */
@@ -146,6 +189,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+   
 }
 
 
