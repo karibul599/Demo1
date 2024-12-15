@@ -4,107 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editable Table</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 00px;
-            display: flex;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .edit-btn, .delete-btn {
-            padding: 5px 10px;
-            border: none;
-            cursor: pointer;
-        }
-        .edit-btn {
-            background-color: #4CAF50;
-            color: white;
-        }
-        .delete-btn {
-            background-color: #f44336;
-            color: white;
-        }
-        .add-row-btn {
-            background-color: #008CBA;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="profile.css">
 </head>
 <body>
     <div class="page">
-    <div class="top">
+    <!-- <div class="top">
         <button class="add-row-btn" onclick="addRow()">Add Row</button>
-    </div>
-    <div class="button">
+    </div> -->
+    <div class="table-body">
         <table id="editableTable">
             <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>City</th>
-                    <th>Actions</th>
-                </tr>
+               
+                    <tr>
+                        <th colspan="2">Name:</th>
+                        <th >Phone Number:</th>
+                        <th >Year:</th>
+                    </tr>
+                    <tr>
+                        <th>Month</th>
+                        <th>Date</th>
+                        <th>Share Number</th>
+                        <th>Amount</th>
+                       
+                    </tr>
+              
             </thead>
             <tbody>
                 <tr>
-                    <td contenteditable="true">John Doe</td>
-                    <td contenteditable="true">28</td>
-                    <td contenteditable="true">New York</td>
-                    <td>
-                        <button class="edit-btn" onclick="editRow(this)">Edit</button>
-                        <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
-                    </td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
 
-
-<script>
-    function addRow() {
-        const table = document.getElementById('editableTable').getElementsByTagName('tbody')[0];
-        const newRow = table.insertRow();
-        newRow.innerHTML = `
-            <td contenteditable="true">New Name</td>
-            <td contenteditable="true">Age</td>
-            <td contenteditable="true">City</td>
-            <td>
-                <button class="edit-btn" onclick="editRow(this)">Edit</button>
-                <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
-            </td>
-        `;
-    }
-
-    function editRow(button) {
-        const row = button.parentElement.parentElement;
-        row.contentEditable = row.contentEditable === "true" ? "false" : "true";
-    }
-
-    function deleteRow(button) {
-        const row = button.parentElement.parentElement;
-        row.remove();
-    }
-</script>
+<script src="profile.js"></script>
 
 </body>
 </html>

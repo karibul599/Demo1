@@ -185,15 +185,37 @@ button:hover {
     height: 100%;
     width: 35%;
     color: #0056b3;
-    display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
    
 }
 
+.right .right-1 {
+    height: 90%;
+    width: 100%;
+}
+.right .right-2 {
+    height: 10%;
+    width: 100%;
+    /* background-color: #FFCC00; */
+    /* background-color: #b4d10f; */
+}
 
+.right .right-2 .back-button {
+    /* position: absolute;  */
+    /* পেজের যেকোনো জায়গায় রাখতে পারবেন */
+    top: 0px; /* উপরের দিক থেকে দূরত্ব */
+    left: 0px; /* বাম দিক থেকে দূরত্ব */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 80%;
+    width: 30%;
+    margin: 2px;
+    margin-left: 175px;
 
+}
 
 
 

@@ -1,0 +1,53 @@
+html,body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    margin: 00px;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+.table-body{
+    width: 80vw;
+    text-align: center;
+    display: flex;
+    margin: 0px 20px 20px 20px;
+
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+.add-row-btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
